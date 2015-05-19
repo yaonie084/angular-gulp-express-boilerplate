@@ -21,7 +21,7 @@ module.exports = function(options) {
 
     var injectOptions = {
       transform: function(filePath) {
-        filePath = filePath.replace(options.src + '/app/', '');
+        filePath = filePath.replace(options.client + '/app/', '');
         return '@import \'' + filePath + '\';';
       },
       starttag: '// injector',
