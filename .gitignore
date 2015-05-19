@@ -1,0 +1,6 @@
+node_modules
+.idea
+bower_components
+.tmp
+npm-debug.log
+dist
