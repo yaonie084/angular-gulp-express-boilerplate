@@ -4,3 +4,5 @@ bower_components
 .tmp
 npm-debug.log
 dist
+config/config.json
+.DS_Store

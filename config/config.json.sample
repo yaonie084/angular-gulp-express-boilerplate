@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "123456",
+    "password": "",
     "database": "guahao-manager_development",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "123456",
+    "username": your username,
+    "password": your password,
     "database": "guahao-manager_production",
-    "host": "106.186.122.83",
+    "host": your host,
     "dialect": "mysql"
   }
 }
