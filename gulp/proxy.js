@@ -21,7 +21,7 @@ var chalk = require('chalk');
 /*
  * Location of your backend server
  */
-var proxyTarget = 'http://server/context/';
+var proxyTarget = 'http://localhost:9000';
 
 var proxy = httpProxy.createProxyServer({
   target: proxyTarget
@@ -61,7 +61,9 @@ function proxyMiddleware(req, res, next) {
  * The first line activate if and the second one ignored it
  */
 
-//module.exports = [proxyMiddleware];
 module.exports = function() {
-  return [];
+  return [proxyMiddleware];
 };
+//module.exports = function() {
+//  return [];
+//};

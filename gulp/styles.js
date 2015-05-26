@@ -16,7 +16,8 @@ module.exports = function(options) {
     var injectFiles = gulp.src([
       options.client + '/app/**/*.scss',
       '!' + options.client + '/app/app.scss',
-      '!' + options.client + '/app/vendor.scss'
+      '!' + options.client + '/app/vendor.scss',
+      '!' + options.client + '/app/theme.scss'
     ], { read: false });
 
     var injectOptions = {
@@ -31,14 +32,18 @@ module.exports = function(options) {
 
     var indexFilter = $.filter('app.scss');
     var vendorFilter = $.filter('vendor.scss');
+    var themeFilter = $.filter('theme.scss');
 
     return gulp.src([
       options.client + '/app/app.scss',
-      options.client + '/app/vendor.scss'
+      options.client + '/app/vendor.scss',
+      options.client + '/app/theme.scss'
     ])
       .pipe(indexFilter)
       .pipe($.inject(injectFiles, injectOptions))
       .pipe(indexFilter.restore())
+      .pipe(themeFilter)
+      .pipe(themeFilter.restore())
       .pipe(vendorFilter)
       .pipe(wiredep(options.wiredep))
       .pipe(vendorFilter.restore())
