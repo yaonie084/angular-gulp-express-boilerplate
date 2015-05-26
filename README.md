@@ -1,7 +1,8 @@
 ## Example Boilerplate
 
 This is an example boilerplate for using Angular, Gulp, express, browserSync and a local web server with LiveReload.
-TODO: I will add tests for it at soon.
+
+*TODO: I will add tests for it at soon.*
 
 # angular-gulp-express-boilerplate
 
@@ -9,13 +10,13 @@ TODO: I will add tests for it at soon.
 
 ## Installation
 
-git clone https://github.com/yaonie084/angular-gulp-express-boilerplate.git
+> * git clone https://github.com/yaonie084/angular-gulp-express-boilerplate.git
 
-cd angular-gulp-express-boilerplate
+> * cd angular-gulp-express-boilerplate
 
-npm install
+> * npm install
 
-bower install
+> * bower install
 
 ### development mode:
 
