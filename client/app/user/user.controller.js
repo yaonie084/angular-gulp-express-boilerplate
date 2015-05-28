@@ -10,7 +10,7 @@ angular.module('angularFullstackApp')
 
       if(form.$valid) {
         Auth.login({
-          username: $scope.user.name,
+          name: $scope.user.name,
           password: $scope.user.password
         })
           .then( function() {

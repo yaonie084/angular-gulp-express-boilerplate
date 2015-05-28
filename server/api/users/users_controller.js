@@ -6,12 +6,12 @@ var jwt = require('jsonwebtoken');
 
 exports.login = function (req, res) {
 
-  var username = req.body.username;
+  var name = req.body.name;
   var password = req.body.password;
 
   Model.User.find({
     where: {
-      name: username
+      name: name
     }
   }).then(function (user) {
     if (user) {

@@ -6,7 +6,12 @@ var Sequelize = require("sequelize");
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || "development";
 var config    = require(__dirname + '/../config/config.json')[env];
-var sequelize = new Sequelize(config.database, config.username, config.password, config);
+console.log(config);
+var loggingSwitch = false;
+if(env == 'development') {
+  loggingSwitch = console.log
+}
+var sequelize = new Sequelize(config.database, config.username, config.password, {host: config.host, logging: loggingSwitch, timezone: '+08:00'});
 var db        = {};
 
 fs

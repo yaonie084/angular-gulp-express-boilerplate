@@ -75,7 +75,10 @@
     "protractor": "~1.7.0",
     "uglify-save-license": "~0.4.1",
     "wrench": "~1.5.8",
-    "connect-livereload": "~0.4.0"
+    "connect-livereload": "~0.4.0",
+    "should": "*",
+    "sinon": "*",
+    "supertest": "*"
   },
   "engines": {
     "node": ">=0.10.0"
