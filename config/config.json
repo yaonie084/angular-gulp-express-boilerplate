@@ -1,0 +1,37 @@
+{
+  "development": {
+    "username": "root",
+    "password": "123456",
+    "database": "guahao-manager_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "guahao_manager_test",
+    "host": "mysql",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "123456",
+    "database": "guahao-manager_production",
+    "host": "106.186.122.83",
+    "dialect": "mysql"
+  },
+  "staging": {
+    "username": { "ENV" : "MYSQL_USERNAME"},
+    "password": { "ENV": "MYSQL_PASSWORD"},
+    "database": {"ENV": "MYSQL_INSTANCE_NAME"},
+    "host": { "ENV": "MYSQL_PORT_3306_TCP_ADDR" },
+    "dialect": "mysql"
+  },
+  "daocloud": {
+    "username": "uqumy2dnRCoIeNKs",
+    "password": "pr2NFKGxCwlaVYMRm",
+    "database": "aXrf0UVhnS3BmcoG",
+    "host": "10.10.26.58",
+    "dialect": "mysql"
+  }
+}

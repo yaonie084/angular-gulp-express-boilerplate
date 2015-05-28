@@ -1,4 +1,4 @@
-FROM yaonie084/node
+FROM yaonie084/angular_express
 
 MAINTAINER ethan <yaonie084@gmail.com>
 
@@ -6,22 +6,17 @@ ENV DEBIAN_FRONTEND noninteractive
 
 EXPOSE 8080
 
-### Installation
+WORKDIR /opt/angular-gulp-express-boilerplate
 
-RUN apt-get install wget
+# Installation
+RUN git pull
 
-RUN cd /opt/angular-gulp-express-boilerplate/config && wget http://7u2o75.com1.z0.glb.clouddn.com/angular-gulp_config.json.png -O config.json
+RUN npm install
 
-RUN cd /opt/angular-gulp-express-boilerplate && npm install
-
-RUN cd /opt/angular-gulp-express-boilerplate && sequelize --env=production db:migrate
-
-# Add config file
-
-RUN cd /opt/angular-gulp-express-boilerplate && bower install --allow-root
+RUN bower install --allow-root
 
 # Run server
 
-RUN cd /opt/angular-gulp-express-boilerplate && gulp
+RUN gulp
 
-CMD cd /opt/angular-gulp-express-boilerplate && NODE_ENV=production node server/app.js
+CMD ["node", "server/app.js"]

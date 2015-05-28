@@ -1,0 +1,4 @@
+pwd;
+mysql -h $MYSQL_PORT_3306_TCP_ADDR -u $MYSQL_USERNAME -p$MYSQL_PASSWORD -e "create database if not exists $MYSQL_INSTANCE_NAME";
+sequelize --env=$env db:migrate;
+node server/app.js;

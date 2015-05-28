@@ -5,7 +5,14 @@ var path      = require("path");
 var Sequelize = require("sequelize");
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || "development";
+
 var config    = require(__dirname + '/../config/config.json')[env];
+for (var key in config){
+  if(config[key].ENV != null){
+    config[key] = process.env[config[key].ENV];
+  }
+
+}
 console.log(config);
 var loggingSwitch = false;
 if(env == 'development') {

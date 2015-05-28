@@ -1,4 +1,4 @@
-image: needcaffeine/git
+image: yaonie084/angular_express
 
 services:
     - mongodb
@@ -10,19 +10,11 @@ env:
 
 install:
     - echo $MYENV
-    - echo "This is an install segment"
-    - echo "Here, we usually run scripts to setup a base environment"
 
 before_script:
-    - echo $MYENV
-    - echo "This is an before_script segment"
-    - echo "Here, we usually run scripts to prepare our test"
+    - mysql -u root -h mysql -e 'create database if not exists guahao_manager_test;'
 
 script:
-    - echo $MYENV
-    - echo "This is an script segment"
-    - echo "Run test cases here"
-    - echo ""
-    - echo "Below shows how to use services"
-    - ping -c 2 mysql
-    - ping -c 2 redis
+    - npm install -g mocha
+    - npm install
+    - NODE_ENV=test mocha spec/controllers/users_spec.js

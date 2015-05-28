@@ -5,6 +5,7 @@
 'use strict';
 
 var errors = require('./components/errors');
+var path = require('path');
 
 module.exports = function(app) {
 
@@ -27,7 +28,7 @@ module.exports = function(app) {
   });
 
   app.get('/*', function(req, res) {
-      res.sendFile(app.get('appPath') + '/index.html');
+    res.sendFile(app.get('appPath') + '/index.html');
   });
 
   //app.post('/auth/local', passport.authenticate('local-signup', {

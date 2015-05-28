@@ -45,7 +45,7 @@ module.exports = function(app) {
   app.use(passport.session()); // persistent login sessions
   app.use(flash());
 
-  if ('production' === env) {
+  if ('production' === env || 'staging' === env) {
     app.use(favicon(path.join(config.root, 'dist', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'dist')));
     app.set('appPath', config.root + '/dist');

@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "gulp test",
-    "start": "supervisor server/app.js"
+    "start": "sh bin/www"
   },
   "devDependencies": {
     "gulp": "~3.8.10",

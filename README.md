@@ -6,7 +6,7 @@ This is an example boilerplate for using Angular, Gulp, express, browserSync and
 
 # angular-gulp-express-boilerplate
 
-**DEMO:** http://yaonie084-example.daoapp.io/
+**DEMO:** http://yaonie084-angular-express.daoapp.io/
 
 ## Installation
 
@@ -27,5 +27,9 @@ This is an example boilerplate for using Angular, Gulp, express, browserSync and
 
 > * step 1: gulp (to release static assets)
 > * step 2: NODE_ENV=production npm start
+
+### staging mode:
+
+> * will coming~
 
 bingo!
