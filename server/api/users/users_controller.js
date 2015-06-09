@@ -8,7 +8,7 @@ exports.login = function (req, res) {
 
   var name = req.body.name;
   var password = req.body.password;
-
+  console.log(req.body);
   Model.User.find({
     where: {
       name: name

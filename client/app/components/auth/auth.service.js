@@ -21,7 +21,7 @@ angular.module('angularFullstackApp')
         var deferred = $q.defer();
 
         $http.post('/api/users/login', {
-          username: user.username,
+          name: user.name,
           password: user.password
         }).
           success(function(data) {
