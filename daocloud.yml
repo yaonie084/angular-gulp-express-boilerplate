@@ -1,4 +1,4 @@
-image: yaonie084/angular_express
+image: yaonie084/angular_express:v2
 
 services:
     - mongodb

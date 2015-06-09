@@ -1,4 +1,4 @@
-FROM yaonie084/angular_express
+FROM yaonie084/angular_express:v2
 
 MAINTAINER ethan <yaonie084@gmail.com>
 
