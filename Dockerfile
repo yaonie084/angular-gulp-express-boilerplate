@@ -1,4 +1,4 @@
-FROM daocloud.io/yaonie084/kkk
+FROM yaonie084/angular_express:v2
 
 MAINTAINER ethan <yaonie084@gmail.com>
 
