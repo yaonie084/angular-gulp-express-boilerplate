@@ -1,3 +1,5 @@
+<a href="https://codeclimate.com/github/yaonie084/angular-gulp-express-boilerplate"><img src="https://codeclimate.com/github/yaonie084/angular-gulp-express-boilerplate/badges/gpa.svg" /></a>
+
 ## Example Boilerplate
 
 This is an example boilerplate for using Angular, Gulp, express, browserSync and a local web server with LiveReload.
